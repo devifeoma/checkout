@@ -774,11 +774,12 @@ background-color: #ffffff;
 
 .barter__cashback {
   background: #219653;
-  padding: 5px;
+  padding: 4px;
   color: white;
   border: none;
-  border-radius: 2px;
-  margin-left: 84px;
+  border-radius: 1px;
+  margin-left: 40px;
+  font-size: 10px;
 }
 
 .closewrapper {
