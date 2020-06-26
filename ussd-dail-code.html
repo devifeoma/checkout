@@ -11,30 +11,33 @@
         .container {
             display: flex;
             min-height: 100vh;
+            width: 100%;
         }
-
+    
         .first__div {
-            flex: 1;
+            /* flex: 1; */
             /* padding: 1rem; */
+            width: 59%;
         }
-
+    
         .second__div {
-            background-color: #e4ecf3;
-            flex: 1;
-            width: 40%;
+            background-color: #F2F2F2;
+            /* flex: 1; */
+            width: 41%;
         }
-
+    
         .pay {
             width: 300px;
-            margin-top: 180px;
+            margin-top: 110px;
+            position: static;
         }
-
+    
         .payment__options__header {
             display: flex;
             align-items: center;
             margin: 0 0 20px 40px;
         }
-
+    
         .payment__options__header h4 {
             font-family: FLW-Regular;
             font-size: 12px;
@@ -42,11 +45,11 @@
             text-transform: uppercase;
             color: #333333;
         }
-
-        .hover:hover {
+    
+        .hover {
             background: rgba(242, 201, 76, 0.18);
         }
-
+    
         .ul {
             display: flex;
             align-items: center;
@@ -54,11 +57,11 @@
             border-bottom: 1px solid #d8d8d8;
             height: 50px;
         }
-
+    
         .ul a {
             text-decoration: none;
         }
-
+    
         .ul a span {
             font-size: 12px;
             line-height: 13px;
@@ -66,19 +69,55 @@
             font-family: FLW-Regular;
             margin-left: 15px;
         }
-
+    
+        .ul a .active {
+            font-family: FLW-Regular;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 13px;
+            color: #F5A623;
+        }
+    
         .more__payment__options {
             display: flex;
             align-items: center;
             margin: 40px 0 0 40px;
         }
-
+    
         .more__payment__options p {
             font-family: FLW-Regular;
             font-size: 13px;
             line-height: 18px;
             text-align: right;
             color: #666666;
+            margin-right: 10px;
+        }
+    
+        .barter__cashback {
+            background: #219653;
+            padding: 5px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            margin-left: 84px;
+        }
+    
+        .closewrapper {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            /* margin-right: 20px; */
+            /* margin-top: 20px; */
+        }
+    
+        #closeX {
+            border: 1px solid #E4E4E4;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            padding-top: 15px;
+            border-radius: 50%;
         }
     </style>
 
@@ -89,26 +128,12 @@
         <div class="first__div">
             <div class="checkout__form">
                 <button class="go__back">
-                    <svg width="16" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
-                            <path
-                                d="M10.4674 0.718605C10.5512 0.634884 10.593 0.534884 10.593 0.418605C10.593 0.302326 10.5512 0.204651 10.4674 0.125581C10.3884 0.0418605 10.2907 0 10.1744 0C10.0581 0 9.95814 0.0418605 9.87442 0.125581L4 6L9.87442 11.8814C9.95814 11.9605 10.0581 12 10.1744 12C10.2907 12 10.3884 11.9605 10.4674 11.8814C10.5512 11.7977 10.593 11.6977 10.593 11.5814C10.593 11.4651 10.5512 11.3674 10.4674 11.2884L5.18605 6L10.4674 0.718605Z"
-                                fill="#2D9CDB" />
-                        </g>
-                        <defs>
-                            <filter id="filter0_d" x="0" y="0" width="14.593" height="20" filterUnits="userSpaceOnUse"
-                                color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-                                <feOffset dy="4" />
-                                <feGaussianBlur stdDeviation="2" />
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-                            </filter>
-                        </defs>
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.46744 0.718605C6.55116 0.634884 6.59302 0.534884 6.59302 0.418605C6.59302 0.302326 6.55116 0.204651 6.46744 0.125581C6.38837 0.0418605 6.2907 0 6.17442 0C6.05814 0 5.95814 0.0418605 5.87442 0.125581L0 6L5.87442 11.8814C5.95814 11.9605 6.05814 12 6.17442 12C6.2907 12 6.38837 11.9605 6.46744 11.8814C6.55116 11.7977 6.59302 11.6977 6.59302 11.5814C6.59302 11.4651 6.55116 11.3674 6.46744 11.2884L1.18605 6L6.46744 0.718605Z"
+                            fill="#2D9CDB" />
                     </svg>
+                
                     <span>Go back</span>
                 </button>
                 <div class="main__dispaly__option">
@@ -117,7 +142,7 @@
                             <img src="assets/img/logo.png" class="logo" />
                             <span>Dropbox paper</span>
                         </div>
-
+                
                         <div class="language__option">
                             <select class="select__style">
                                 <option>English</option>
@@ -125,9 +150,9 @@
                             </select>
                         </div>
                     </div>
-
+                
                     <div class="currency__display">
-                        <p>KES 234,567</p>
+                        <p>KES <span class="currency__amount">234,567</span></p>
                         <span>tedlade.tl@gmail.com</span>
                     </div>
                 </div>
@@ -158,6 +183,7 @@
         </div>
 
         <div class="second__div">
+            <div class="closewrapper"><span id="closeX">x</span> </div>
             <div class="pay">
                 <div class="payment__options__header">
                     <h4>Payment Options</h4>
@@ -176,11 +202,11 @@
                             </svg>
         
         
-                            <span>Card</span>
+                            <span class="active">Card</span>
                         </a>
                     </div>
                 </div>
-                <div class="hover">
+                <div class="">
                     <div class="ul">
                         <a href="ussd-select-bank.html"><svg width="12" height="9" viewBox="0 0 12 9" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +232,7 @@
                             <span>USSD</span></a>
                     </div>
                 </div>
-                <div class="hover">
+                <div class="">
                     <div class="ul">
                         <a href="bank-payment.html"><svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +243,7 @@
                             <span>Bank</span></a>
                     </div>
                 </div>
-                <div class="hover">
+                <div class="">
                     <div class="ul">
                         <a href="qr.html"><svg width="14" height="13" viewBox="0 0 14 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -274,20 +300,29 @@
                             <span>QR</span></a>
                     </div>
                 </div>
-                <div class="hover">
+                <div class="">
                     <div class="ul">
                         <a href="#">
-                            <img src="../assets/img/barter.svg" />
+                            <!-- <img src="../assets/img/barter.svg" /> -->
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.3202 6.84745C12.2786 5.36687 16.3075 0.0752677 10.0125 1.00747C7.27064 1.39132 3.87172 3.63461 3.06036 6.43122C2.63706 5.68337 2.16998 4.9602 1.66147 4.26521C0.906062 3.30559 -0.591153 4.24276 0.248181 5.2298C2.6263 8.05382 4.27701 11.4536 4.27701 14.8808C4.47283 13.1809 4.79498 10.9003 4.06758 8.8714C4.33374 9.05094 4.35304 9.06443 4.53832 9.2834C5.82529 11.2026 7.80219 12.7971 10.0125 13.5648C12.0269 14.305 14.7127 13.8664 13.6216 10.9053"
+                                    fill="#959EA9" />
+                            </svg>
+        
                             <span>Barter</span>
-                            <button
-                                style="background: #219653; padding: 5px; color: white; border: none; border-radius: 2px; margin-left: 103px;">
-                                0.5% cash back
-                            </button>
+                            <button class="barter__cashback"> 0.5% cash back</button>
                         </a>
                     </div>
                 </div>
                 <div class="more__payment__options">
                     <p>More payment options</p>
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.337763 9.99125L1.25474 10.9102L6.34961 5.77007L1.24959 0.629887L0.337763 1.54889L4.52596 5.77007L0.337763 9.99125Z"
+                            fill="#666666" />
+                    </svg>
+        
                 </div>
             </div>
         </div>
